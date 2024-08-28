@@ -1,0 +1,19 @@
+<div ng-controller="MainController" class="main">
+  <div
+    class="card d-flex"
+    ng-repeat="item in arr | filter:search"
+    style="width: 18rem"
+  >
+    <img class="card-img-top" ng-src="{{item.p_img}}" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="d-inline card-title me-5">{{item.p_name}}</h5>
+      <h5 class="d-inline">{{item.p_price}}</h5>
+      <button
+        ng-click="counterFunction(); storeItems(item)"
+        class="btn btn-primary mt-2 ms-5"
+      >
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
